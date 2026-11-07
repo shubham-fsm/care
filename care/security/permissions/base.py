@@ -32,6 +32,7 @@ from care.security.permissions.payment_reconciliation import (
 from care.security.permissions.product import ProductPermissions
 from care.security.permissions.product_knowledge import ProductKnowledgePermissions
 from care.security.permissions.questionnaire import QuestionnairePermissions
+from care.security.permissions.referral import ReferralPermissions
 from care.security.permissions.questionnaire_response_template import (
     QuestionnaireResponseTemplatePermissions,
 )
@@ -99,6 +100,7 @@ class PermissionController:
         ServiceAccountPermissions,
         ResourceCategoryPermissions,
         QuestionnaireResponseTemplatePermissions,
+        ReferralPermissions,
     ]
 
     cache = {}

@@ -500,6 +500,19 @@ router.register("template", TemplateViewSet, basename="template")
 router.register("template_reports", ReportUploadViewSet, basename="template-reports")
 
 router.register("extensions", ExtensionsViewSet, basename="extensions")
+
+# PROTOTYPE referral API (local CARE 3.1 demo)
+from care.emr.api.viewsets.referral import (  # noqa: E402
+    ReferralAssignedViewSet,
+    ReferralAvailabilityConfigViewSet,
+    ReferralAvailabilityViewSet,
+    ReferralViewSet,
+)
+
+router.register("referral_availability", ReferralAvailabilityViewSet, basename="referral-availability")
+router.register("referral_availability_config", ReferralAvailabilityConfigViewSet, basename="referral-availability-config")
+router.register("referral_assigned", ReferralAssignedViewSet, basename="referral-assigned")
+router.register("referral", ReferralViewSet, basename="referral")
 app_name = "api"
 urlpatterns = [
     path("", include(router.urls)),
